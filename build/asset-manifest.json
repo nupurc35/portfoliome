@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/mycart/static/css/main.f58d506e.chunk.css",
+    "main.js": "/mycart/static/js/main.d6df0e6d.chunk.js",
+    "main.js.map": "/mycart/static/js/main.d6df0e6d.chunk.js.map",
+    "runtime-main.js": "/mycart/static/js/runtime-main.b486c50c.js",
+    "runtime-main.js.map": "/mycart/static/js/runtime-main.b486c50c.js.map",
+    "static/js/2.d0759f08.chunk.js": "/mycart/static/js/2.d0759f08.chunk.js",
+    "static/js/2.d0759f08.chunk.js.map": "/mycart/static/js/2.d0759f08.chunk.js.map",
+    "index.html": "/mycart/index.html",
+    "static/css/main.f58d506e.chunk.css.map": "/mycart/static/css/main.f58d506e.chunk.css.map",
+    "static/js/2.d0759f08.chunk.js.LICENSE.txt": "/mycart/static/js/2.d0759f08.chunk.js.LICENSE.txt",
+    "static/media/image-1.2240ccde.jpg": "/mycart/static/media/image-1.2240ccde.jpg",
+    "static/media/image-2.8b482139.jpg": "/mycart/static/media/image-2.8b482139.jpg",
+    "static/media/image-3.05d671be.jpg": "/mycart/static/media/image-3.05d671be.jpg",
+    "static/media/image-4.b31eb2ea.jpg": "/mycart/static/media/image-4.b31eb2ea.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b486c50c.js",
+    "static/js/2.d0759f08.chunk.js",
+    "static/css/main.f58d506e.chunk.css",
+    "static/js/main.d6df0e6d.chunk.js"
+  ]
+}
