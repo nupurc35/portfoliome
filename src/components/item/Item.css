@@ -1,0 +1,55 @@
+.item{
+    display: flex;
+    margin-bottom: 6px;
+    border-bottom: 1px solid seagreen;
+    padding-bottom: 11px;
+}
+
+.image{
+    border:1px solid #ccc;
+    width: 120px;
+    height: 100px;
+}
+
+.leftbox{
+display: flex;
+flex: 1;
+}
+
+.mydescrip{
+margin-top: 10px;
+margin-left: 10px;
+font-weight: bold;
+}
+
+.description{
+ margin-top: 5px;
+}
+
+.rightbox{
+ display: flex;
+ flex-direction: column;
+
+}
+
+.addcart{
+    margin-top: 13px;
+}
+
+.button-box{
+ margin-bottom:20px;
+
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+.text-left{
+      margin-right: 5px;
+
+}
+.text-right{
+      margin-left: 5px;
+}

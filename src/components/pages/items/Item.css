@@ -1,0 +1,33 @@
+ul .item-li{
+  list-style-type: none;  
+}
+
+.item-ul{
+    padding: 0px;
+    margin: 0px;
+    font-size: 13px;
+    height: 125vh;
+}
+
+.rightbox{
+  display: flex;
+  flex-direction: column;
+ 
+ }
+
+ .addcart{
+  margin-top: 13px;
+}
+
+.grand-total{
+  display: flex;
+  margin-top: 0px;
+  margin-left: 88px;
+  height: 10vh;
+}
+ 
+.total{
+   flex: 1;
+
+
+}
