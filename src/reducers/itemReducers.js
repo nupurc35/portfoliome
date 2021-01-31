@@ -1,87 +1,49 @@
-import{GET_ITEMS,ADD_QUANTITY,SUB_QUANTITY} from '../actions/types'
-import image1 from '../components/images/image-1.jpg';
-import image2 from '../components/images/image-2.jpg';
-import image3 from '../components/images/image-3.jpg';
-import image4 from '../components/images/image-4.jpg';
-import image5 from '../components/images/image-5.jpg'; 
+import{SET_LOADING, GET_CATEGORIES,GET_PRODUCTS,ADD_TO_CART, DELETE_ITEM} from '../actions/types'
 const initialState = {
-items:[
-    {
-       id: 1,
-       name: "Apple Watch Silver",
-       description: "A more expensive watch",
-       price: 200,
-       img:image1,
-       quantity:0
-      },
-  
-     {
-      id: 2,
-      name: "Apple laptop",
-      description: "An iPad like no other. 16GB, WiFi, 4G.",
-      price: 330,
-      img:image4,
-      quantity:0
-      },
-      {
-      id: 3,
-      name: "A pair of nike shoe",
-      description: "Its very pleasant to wear",
-      price: 220,
-      img:image2,
-      quantity:0
-      },
-      {
-      id: 4,
-      name: "A sony headphone",
-      description: "A beautiful headpho",
-      price: 110,
-      img:image5,
-      quantity:0
-      },
-      {
-      id: 5,
-      name: "Apple Watch Sport",
-      description: "A watch",
-      price:300,
-      img:image3,
-      quantity:0
-      }
-],
+categories:[],
 addedItems : [],
-Total : 0  
+products:[],
+cart:[]
 }
-export default function  (state = initialState , action ){
+  export default function  (state = initialState , action ){
+    let cart = state.cart ;
     switch(action.type){
-    case GET_ITEMS:
-    return {
-   ...state ,
-     items:action.payload,
-     };
-   
-    case ADD_QUANTITY:
-        return {
-              ...state,
-              items: state.items.map(item =>
-                item.id === action.payload
-                  ? {...item, quantity: item.quantity + 1}
-                  : item,
-              ),
-             Total: state.items.reduce((Total, item) => Total + item.quantity*item.price) 
-            };
+     
+     case GET_CATEGORIES:
+      return {
+       ...state ,
+           categories:action.payload,
+       };
+     case GET_PRODUCTS:
+      return {
+       ...state ,
+         products: state.categories.find(category =>
+                 category.id  === action.payload
+                  ).products.map(product=>
+                           product    
+                    )   
+      };  
+     
+     case ADD_TO_CART:
+            return {
+               ...state,
+               cart:[...state.cart,action.payload]
+              };
+        
+      case DELETE_ITEM:
+                return {
+                   ...state,
+                    cart: state.cart.filter((item) => item.id !== action.payload)
+                  };  
+        
+ 
 
-
-    case SUB_QUANTITY:
-             return {
-                ...state,
-                   items: state.items.map(item =>
-                       item.id === action.payload
-                        ?   {...item, quantity: item.quantity>=1? item.quantity-1:item.quantity}: item,
-                ),    
-          };          
-    
+      case SET_LOADING:
+              return {
+           ...state,
+           loading: true
+        };          
     default:
             return state      
-
-             } 
+         } 
     }

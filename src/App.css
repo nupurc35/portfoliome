@@ -2,3 +2,7 @@
   padding: 36px;
 
 }
+.main-box{
+  display: flex;
+  justify-content: center;
+}

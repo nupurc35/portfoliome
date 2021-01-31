@@ -3,11 +3,11 @@ ul .item-li{
 }
 
 .item-ul{
-    padding: 0px;
+    padding-left: 0px;
+    padding: 68px;
     margin: 0px;
     font-size: 13px;
-    height: 125vh;
-}
+  }
 
 .rightbox{
   display: flex;
@@ -30,4 +30,22 @@ ul .item-li{
    flex: 1;
 
 
+}
+
+li{
+  list-style-type: none;
+}
+
+.head-text-box{
+
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #5faf4cf0;
+  border-bottom-width: 4px;
+
+}
+.main-box-item{
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
 }
