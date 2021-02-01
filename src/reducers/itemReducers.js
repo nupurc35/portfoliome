@@ -25,10 +25,20 @@ cart:[]
       };  
      
      case ADD_TO_CART:
-            return {
+              let adededItem = state.cart.find(cartItem=>cartItem.id===action.payload.id)                
+              if(adededItem){  
+              return {
                ...state,
-               cart:[...state.cart,action.payload]
-              };
+                cart:[...state.cart]
+             
+            }; 
+          } 
+            else{
+              return{
+                ...state,
+                cart:[...state.cart,action.payload],
+              }
+            }
         
       case DELETE_ITEM:
                 return {
@@ -36,8 +46,6 @@ cart:[]
                     cart: state.cart.filter((item) => item.id !== action.payload)
                   };  
         
- 
-
       case SET_LOADING:
               return {
            ...state,
