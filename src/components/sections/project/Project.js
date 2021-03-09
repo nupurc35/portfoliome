@@ -17,7 +17,7 @@ return(
                         <h2 className="m-t-0">
                            Elsewhere
                        </h2>
-                       <p>For even more recent work, you can find me coding on <a href="https://github.com/adamgreenough">Github</a></p>
+                       <p>For even more recent work, you can find me coding on <a href="https://github.com/nupurc35">Github</a></p>
                     </div>
                 </div>
               </div>
@@ -25,7 +25,7 @@ return(
            <div className="container project-bg">
              <div className="row site-content">
               <div className="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                <a href="https://tender-wing-5c1b06.netlify.app/">
+                <a href="https://friendly-poitras-44eaf1.netlify.app/">
                   <div className="portfolio-card"  style={{ backgroundImage: 'url(/images/shopping-cart.png)',height:"150px"  }}>
                        <div className="card-overlay"></div>
                        <div className="article">
