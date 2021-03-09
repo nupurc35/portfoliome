@@ -1,47 +1,43 @@
 import React,{useEffect}from 'react';
 import './Nav.css';
 import PropTypes from 'prop-types'; 
-import {getcategories} from '../../actions/itemAction';
-import {getproducts} from '../../actions/itemAction';
-import {connect} from 'react-redux' 
-const Nav = ({categories,getcategories,getproducts})=>{
-  useEffect(() => {
-    getcategories()
-        },[]);  
-        
-   const handleproducts = (id)=>{
-            getproducts(id)
-        }    
-return (
-  <header>
-    <nav className="navbar navbar-expand-md bg-dark navbar-dark">
-     <a className="navbar-brand" href="#">Shopping List</a> 
-       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-        <span className="navbar-toggler-icon"></span>
-      </button>
-      <div className ="collapse navbar-collapse" id="collapsibleNavbar">
-         <ul className="navbar-nav"> 
-        {categories&& categories.map(category=>{
-                 return ( <li className="nav-item" key={category.id}>
-                 <a className="nav-link" href="/#" onClick={()=>handleproducts(category.id)} >{category.name}</a>
-                         </li>) 
-            })       
-      }   
-        </ul>
-      </div>
-    </nav>
-  </header>
-      ) 
-}
-const mapStateToProps = (state) =>({
-  categories:state.item.categories,
-  products:state.item.products,
- 
-})
+import { NavLink } from 'react-router-dom'
+import { useLocation } from 'react-router-dom';
 
-Nav.propTypes = {
-  getcategories:PropTypes.func.isRequired
-};
-export default connect(mapStateToProps,{getcategories,getproducts})(Nav)
+const Nav = ()=>{ 
+    const location = useLocation();
+    let pathname = window.location.pathname;
+    useEffect(()=>{
+            pathname = window.location.pathname
+      },[window.location.pathname])
+    const homeClass = location.pathname ==='/' ? "activeClass" : "";
+    const aboutClass = location.pathname.match('/about') ? "activeClass" : "";
+    const projectClass = location.pathname.match('/project') ? "activeClass" : "";
+    const contactClass = location.pathname.match('/contact') ? "activeClass" : "";
+  return (
+  <nav className="nav-bar">
+        <span className = "navbar-toggle" id="js-navbar-toggle">
+            <i className = "fas fa-bars"></i>
+        </span>
+        <a href="#" className="logo">Nupur Das</a>      
+        <ul className="main-nav" id="js-menu">
+            <li>
+            <NavLink to="/" className= {`nav-links ${homeClass}`}>Home</NavLink>
+            </li>
+            <li>
+            <NavLink to="/about" className={`nav-links ${aboutClass}`}>About</NavLink>
+            </li>
+            <li>
+            <NavLink to="/project" className= {`nav-links ${projectClass}`}>Project</NavLink>
+            </li>
+            <li>
+               <NavLink to="/contact" className={`nav-links ${contactClass}`}>Contact</NavLink>
+            </li>
+        </ul>
+</nav>
+ ) 
+}
+export default Nav
+
 
 

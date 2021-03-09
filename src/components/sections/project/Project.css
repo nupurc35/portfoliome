@@ -1,0 +1,95 @@
+.aside-bg{
+    background: #f5f9fb;
+    margin-bottom: 30px;
+    border-radius: 3px;
+    padding-bottom: 5rem;
+    padding-right: 3rem;
+    padding-left: 1.2rem;
+}
+
+.site-content{
+   margin-top: 50px;
+}
+
+.site-content h2{
+   font-family:'Arvo', serif; 
+
+}
+
+
+.site-content a{
+    text-decoration: none;
+}
+p.lead{
+   
+        font-size: 120%;
+        font-weight: 600;
+        color: #1a1c1d;
+        line-height: 1.5;
+        font-family: 'Josefin Sans', sans-serif;
+}
+
+.project-bg .portfolio-card{
+    position: relative;
+    background-size: cover; 
+    background-position: center center;
+    margin-top: 1.3rem;
+}
+
+.portfolio-card img{
+  width:100%;
+  height: 170px;
+}
+
+.project-bg{
+ background: #f5f9fb;   
+ padding-bottom: 3rem;
+}
+
+.portfolio-card .card-overlay{
+    background: rgba(0,0,0,.6);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 0;
+    pointer-events: none;
+    transition: .25s;
+}
+.portfolio-card  .article{
+   position:relative;
+}
+
+.portfolio-card  .article h2{
+    color: rgba(255,255,255,.95);
+    font-size: 60%;
+}
+.portfolio-card  .article h2{
+    padding-top: 1.2rem;
+    font-size: 1.2rem;
+    margin-left: 1.3rem;
+}
+
+.portfolio-card .article p{
+    font-size: 71%;
+    color: rgba(255,255,255,.75);
+    font-family: open sans,system-ui,BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+    margin-left: 1.3rem;
+}
+
+.aside-bg h2{
+   font-size: 2.1rem;
+   padding:5px 0px 0px 0px;
+   font-family: 'Ravi Prakash', cursive;
+
+}
+.aside-bg p{
+    color: black;
+    margin-left: 3px;
+    font-family: 'Lobster', cursive; 
+}
+
+.aside-bg a{
+  font-family: 'Lobster', cursive; 
+  color:#e22b2bb5;
+
+}

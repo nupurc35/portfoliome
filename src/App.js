@@ -1,27 +1,38 @@
 import   React, {Fragment } from 'react'
 import   './App.css';
 import   Navbarapp from './components/nav/Nav'
-import  {createBrowserHistory} from 'history';
-import  Itempage from './components/pages/items/Itempage'
-import  Cartpage from  './components/pages/cart/Cartpage'
-import  {Provider} from 'react-redux'
-import  store from './store'
-import  {connect} from 'react-redux' 
-import  {Router} from "react-router-dom";
+import Home from './components/sections/home/Home'
+import About from './components/sections/about/About'
+import Project from './components/sections/project/Project';
+import Footer from './components/sections/footer/Footer';
+import Contact from './components/sections/contact/Contact';
+import { createBrowserHistory } from 'history';
+import {Router, Route, Switch } from "react-router-dom";
+
 const App =( )=> {
-  const history = createBrowserHistory();  
+   const history = createBrowserHistory();
 return (
-    <Provider store={store}>
-    <Router history={history}>
+   <Router history={history}>
     <div className="App">
      <Navbarapp ></Navbarapp> 
-      <div className="main-box">
-       <Itempage></Itempage>
-       <Cartpage></Cartpage>
-      </div>
+     <Switch>
+        <Route exact path='/' render={props=>(<Fragment>
+        <Home></Home> 
+        </Fragment>)}></Route> 
+      <Route exact path = '/about/' render={props=>(<Fragment>
+           <About ></About>
+      </Fragment>)}></Route>
+      <Route exact path = '/project/' render={props=>(<Fragment>
+           <Project></Project>
+      </Fragment>)}></Route>
+      <Route exact path = '/contact/' render={props=>(<Fragment>
+           <Contact></Contact>
+      </Fragment>)}></Route>
+    </Switch>
+     <Footer> </Footer>
    </div>
    </Router>
-   </Provider>
+   
    );
 }
-export default connect(null)(App)
+export default  App 

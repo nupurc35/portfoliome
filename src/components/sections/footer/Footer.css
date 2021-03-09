@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+#footer{
+ background-color:#1c1e21;
+ padding: 60px 0 0;
+ padding-bottom:60px; 
+}
+
+#footer h2{
+    font-family: 'Abril Fatface', cursive;
+    color: white;
+}
+
+.find-me{
+padding: 0;
+margin: 0;
+list-style-type: none;
+
+}
+
+#footer h3{
+    font-family: 'Abril Fatface', cursive;
+    color: white;
+}
+
+#footer p{
+  font-size: 0.9rem;
+
+}
+
+.find-me i{
+ color: white;
+}
+
+#footer .profile{
+    color: white;
+    margin-left: 19px;
+} 
+.find-me a{
+   color: #0075db;
+}
