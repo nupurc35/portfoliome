@@ -235,3 +235,18 @@ margin-top: 2rem;
     width: 46%;
 }
 
+
+@media (max-width: 768px){
+    .text .text-wrap{
+       display:block;
+    }
+      .who-wrap{
+          margin-top: 1rem;
+          width: 100%;
+      }
+      .who_en{
+          font-weight: 600;
+      }
+
+}
+

@@ -25,7 +25,7 @@ return(
            <div className="container project-bg">
              <div className="row site-content">
               <div className="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                <a href="https://friendly-poitras-44eaf1.netlify.app/">
+                <a href="https://github.com/nupurc35/mycart.git">
                   <div className="portfolio-card"  style={{ backgroundImage: 'url(/images/shopping-cart.png)',height:"150px"  }}>
                        <div className="card-overlay"></div>
                        <div className="article">
@@ -36,7 +36,7 @@ return(
                 </a>
               </div>
               <div className="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                  <a href="https://vigorous-jang-0802a9.netlify.app">
+                  <a href="https://github.com/nupurc35/quizapp.git">
                    <div className="portfolio-card" style={{ backgroundImage: 'url(/images/quiz.jpg)',height:"150px"}}>
                      <div className="card-overlay"></div>
                      <div className="article">
@@ -48,7 +48,7 @@ return(
                   </a>
               </div>
               <div className="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                <a href="https://happy-euler-6fc877.netlify.app">
+                <a href="https://github.com/nupurc35/serachYourmovie.git">
               <div className="portfolio-card" style={{ backgroundImage: 'url(/images/movieSearch.jpg)',height:"150px"}}  >
                     <div className="card-overlay"></div>
                     <div className="article">
