@@ -1,5 +1,6 @@
 import React,{useEffect}from 'react';
 import './Contact.css';
+import ContactForm from '../../contact-form'
 const Contact = ()=>{
 return(
   <section  id="contact" >
@@ -21,23 +22,14 @@ return(
             <div className="row">
              <div className="col-lg-8 col-md-8 col-sm-12 col-xs-12">    
              <h1 className="m-t-0">Contact Form</h1>
-             <form>
-             <div class="form-group">
-         <label>Name</label>
-         <input type="name" class="form-control" placeholder="John alan"/>
-         </div>
-    
-     <div class="form-group">
-     <label>Email address</label>
-    <input type="email" class="form-control"placeholder="Enter email"/>
-  </div>
-    <div class="form-group">
-    <label>Message</label>
-    <textarea class="form-control" rows="3"></textarea>
-    </div>
-   
-    <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+             <ps-contact-form
+		         integration-key="79c0f8fb079f1fa516c1476bd2ff1b2586e48a94ab910898d5ef18f8f74d1ba5"
+		         full-name-placeholder-text="Full Name"
+		         email-placeholder-text="Email"
+		         message-placeholder-text="Message"
+		         submit-button-text="Submit"
+		         success-message="Thank you for contacting us, we will get back to your shortly"
+		         tags="homepage, before-footer"></ps-contact-form>           
            </div>        
            </div> 
           </div>
